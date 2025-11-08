@@ -1,0 +1,94 @@
+:root {
+    --ctxt: #eaedf4;
+    --ctxta: #eaedf450;
+    --cbg: #1b1f28;
+    --c1: #40f0b9;
+    --c2: #1c8dea;
+    --c3: #e555ff;
+    --c3a: #e555ff50;
+}
+
+* {
+    color: var(--ctxt);
+    font-family:'Courier New', Courier, monospace;
+}
+
+h1, h2, h3, nav {
+    text-align: center;
+    color: var(--c1);
+    font-weight: bolder;
+}
+
+footer {
+    text-align: center;
+    color: var(--ctxta);
+    font-weight: lighter;
+    font-size: smaller;
+    padding-top: 22em;
+}
+
+nav {
+    word-spacing: 0.8em;
+}
+
+a {
+    color: var(--c2);
+    font-weight: normal;
+}
+
+p, form {
+    margin-left: 20%;
+    margin-right: 20%;
+}
+
+body, input, textarea {
+    background-color: var(--cbg);
+    font-size: medium;
+    resize: none;
+}
+
+button, input, textarea {
+    border-style: solid;
+    border-radius: 0.5em;
+    border-color: var(--ctxta);
+}
+
+button {
+    background-color: var(--bg);
+    justify-self: center;
+    width: 15em;
+    height: 2em;
+    border-color: var(--c3);
+    color: var(--c3);
+    cursor: pointer;
+}
+
+button:active {
+    background-color: var(--c3a);
+}
+
+form {
+    display: grid;
+    grid-template-columns: 7em auto;
+    row-gap: 1em;
+}
+
+@media screen and (max-width: 900px) {
+    p, form {
+        margin-left: 10%;
+        margin-right: 10%;
+    }
+
+    form {
+        display: flex;
+        flex-direction: column;
+    }
+
+    button {
+        width:auto;
+    }
+
+    footer {
+        padding-top: 10em;
+    }
+}
