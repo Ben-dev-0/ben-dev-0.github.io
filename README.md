@@ -1,0 +1,4 @@
+My slightly made-up problem is that in order to stand out, I need to supplement my software portfolio with my own website outside of social media. Making a memorable portfolio would allow me to stick out to employers. For inspiration,
+[neal.fun](https://neal.fun/) immedietly comes to mind. I also think that making my own website would be a beneficial and fun exercise to learn more about web technologies, both frontend and backend. I hope to include multiple
+interactive pages and small games from the projects section. For my current projects, I will include some information about my capstone. A table including a picture, date, and name will be used to display a list of projects.
+The website will also include a gallery of photos from my hiking and other outings. The home page will have a contact form that requires a name, subject, email, and body.
