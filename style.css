@@ -1,7 +1,7 @@
 :root {
     --ctxt: #eaedf4;
     --ctxta: #eaedf450;
-    --cbg: #1b1f28;
+    --cbg: #1f2127/*#1b1f28*/;
     --c1: #40f0b9;
     --c2: #1c8dea;
     --c3: #e555ff;
@@ -10,7 +10,11 @@
 
 * {
     color: var(--ctxt);
-    font-family:'Courier New', Courier, monospace;
+    font-family:'jetbrains mono', Courier, monospace;
+}
+
+#current-page {
+    color: var(--c3)
 }
 
 h1, h2, h3, nav {

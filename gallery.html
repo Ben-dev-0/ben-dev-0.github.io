@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" content="width=device-width initial-scale=1.0"/>
+        <link rel="stylesheet" href="style.css" />
+        <title>Ben Stefl</title>
+    </head>
+    <body>
+        <h1>Ben Stefl</h1>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="gallery.html"  id="current-page">Gallery</a>
+            <a href="projects.html">Projects</a>
+        </nav>
+        <h3>Gallery</h3>
+        <div id="image-grid"></div>
+        <footer>
+            <small>
+                <i>
+                    <br />&copy; 2025 Ben Stefl All rights reserved<br />
+                </i>
+            </small>
+        </footer>
+    </body>
+</html>
+<style>
+    #image-grid {
+        display: flex;
+        flex-direction: column;
+        margin-left: 20%;
+        margin-right: 20%;
+    }
+
+    .image-row {
+        display: flex;
+        flex-direction: row;
+        height: 20vw;
+        justify-content: center;
+    }
+
+    .image-tile {
+        flex: 1;
+    }
+
+    .image-row .image-tile {
+        padding: 0.5em 0.5em 0.5em 0.5em ;
+        border: 0 0 0 0;
+        margin: 0 0 0 0;
+    }
+
+    .image {
+        object-fit: cover;
+        width: 100%;
+        height: 100%;
+    }
+
+    @media screen and (max-width: 900px) {
+        .image-row {
+            flex-direction: column;
+            flex: 1;
+        }
+
+        #image-grid {
+            display: flex;
+            flex-direction: column;
+            margin-left: 10%;
+            margin-right: 10%;
+        }
+    }
+</style>
+<script>
+    const imagesList = [
+        "b10.jpg", "b11.jpg", "b13.jpg", "b12.jpg", "b1.jpg", "b2.jpg", "b3.jpg", "b4.jpg", "b5.jpg",
+        "b6.jpg", "b7.jpg", "b8.jpg", "b9.jpg", "g1.jpg", "g2.jpg", "g3.jpg", "g4.jpg", "k1.jpg",
+        "k2.jpg", "r1.jpg", "r2.jpg", "sm10.jpg", "sm11.jpg", "sm12.jpg", "sm13.jpg", "sm14.jpg",
+        "sm15.jpg", "sm16.jpg", "sm17.jpg", "sm18.jpg", "sm19.jpg", "sm1.jpg", "sm20.jpg", "sm21.jpg",
+        "sm2.jpg", "sm3.jpg", "sm4.jpg", "sm5.jpg", "sm6.jpg", "sm7.jpg", "sm8.jpg", "sm9.jpg",
+        "tr1.jpg", "tr2.jpg", "tr3.jpg", "tr4.jpg", "tr5.jpg", "tr6.jpg",
+    ]
+
+    const imageContainer = document.getElementById("image-grid");
+
+    for (i = 0; i < imagesList.length; i = i+3) {
+        const row = document.createElement("div")
+        row.setAttribute("class", "image-row")
+        row.appendChild(imageTile("gallery/".concat(imagesList[i]), imagesList[i]));
+        if (i+1 < imagesList.length)
+            row.appendChild(imageTile("gallery/".concat(imagesList[i+1]), imagesList[i+1]));
+        if (i+2 < imagesList.length)
+            row.appendChild(imageTile("gallery/".concat(imagesList[i+2]), imagesList[i+2]));
+        imageContainer.appendChild(row);
+    }
+    
+    function imageTile(path, altText) {
+        const figure = document.createElement("figure");
+        figure.setAttribute("class", "image-tile");
+        const img = new Image();
+        img.setAttribute("class", "image");
+        img.setAttribute("src", path);
+        img.setAttribute("alt", altText);
+        figure.appendChild(img);
+        return figure;
+    }
+</script>

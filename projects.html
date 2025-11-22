@@ -1,0 +1,112 @@
+<!-- | Picture | Project Name | Year | -->
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" content="width=device-width initial-scale=1.0"/>
+        <link rel="stylesheet" href="style.css" />
+        <title>Ben Stefl</title>
+    </head>
+    <body>
+        <h1>Ben Stefl</h1>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="gallery.html">Gallery</a>
+            <a href="projects.html" id="current-page">Projects</a>
+        </nav>
+        <h3>Projects</h3>
+        <table>
+            <tr>
+                <th>
+                </th>
+                <th>Name</th>
+                <th>Year</th>
+            </tr>
+            <tr>
+                <td>
+                    <figure>
+                        <img src="mario-verduzco-unsplash.jpg" alt="Unsplash photo by Mario Verduzco">
+                    </figure>
+                </td>
+                <td>
+                    Digital trading card game with visual scripting language allowing for user-generated content<br>
+                    <span>Unsplash photo by Mario Verduzco</span>
+                </td>
+                <td>2028</td>
+            </tr>
+            <tr>
+                <td>
+                    <figure>
+                        <img src="maarten-van-den-heuvel-unsplash.jpg" alt="Unsplash photo by Maarten Van Den Heuvel">
+                    </figure>
+                </td>
+                <td>
+                    Procedurally generating scaled modern realistic virtual metropolitian environments<br>
+                    <span>Unsplash photo by Maarten Van Den Heuvel</span>
+                </td>
+                <td>2027</td>
+            </tr>
+            <tr>
+                <td>
+                    <figure>
+                        <img src="micheile-henderson-unsplash.jpg" alt="Unsplash photo by Micheile Henderson">
+                    </figure>
+                </td>
+                <td>
+                    AI-powered bylaw evaluation for Canadian small businesses<br>
+                    <span>Unsplash photo by Micheile Henderson</span>
+                </td>
+                <td>2026</td>
+            </tr>
+        </table>
+        <footer>
+            <small>
+                <i>
+                    <br />&copy; 2025 Ben Stefl All rights reserved<br />
+                </i>
+            </small>
+        </footer>
+    </body>
+</html>
+<style>
+    table {
+        margin-left: 25%;
+        margin-right: 25%;
+        padding-left: 1em;
+        padding-right: 1em;
+    }
+
+    td {
+        font-size: larger;
+    }
+
+    td > span {
+        font-size: x-small;
+    }
+
+    th {
+        font-size: x-large;
+    }
+
+    figure {
+        width: 10vw;
+        height: 10vw;
+    }
+
+    img {
+        object-fit: cover;
+        width: 100%;
+        height: 100%;
+    }
+
+    @media screen and (max-width: 900px) {
+        table {
+            margin-left: 5%;
+            margin-right: 10%;
+        }
+
+        figure {
+            width: 15vw;
+            height: 15vw;
+        }
+    }
+</style>
