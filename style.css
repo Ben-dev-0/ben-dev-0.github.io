@@ -8,6 +8,20 @@
     --c3a: #e555ff50;
 }
 
+@font-face {
+    font-family: "jetbrains mono";
+    src:
+        local("jetbrains mono"),
+        url("JetBrainsMono-Regular.ttf");
+}
+
+@font-face {
+    font-family: "jetbrains mono bold";
+    src:
+        local("jetbrains mono bold"),
+        url("JetBrainsMono-Bold.ttf");
+}
+
 * {
     color: var(--ctxt);
     font-family:'jetbrains mono', Courier, monospace;
@@ -20,7 +34,7 @@
 h1, h2, h3, nav {
     text-align: center;
     color: var(--c1);
-    font-weight: bolder;
+    font-family: "jetbrains mono bold";
 }
 
 footer {
@@ -28,7 +42,8 @@ footer {
     color: var(--ctxta);
     font-weight: lighter;
     font-size: smaller;
-    padding-top: 22em;
+    padding-top: 3em;
+    padding-bottom: 2em;
 }
 
 nav {
